@@ -1,12 +1,12 @@
 package com.graph.binarytree.algorithms;
 //http://algorithms.tutorialhorizon.com/find-the-maximum-width-of-a-binary-tree/
 /*
- * Maximum width of a tree is noth­ing but the Max(nodes at each level).
+ * Maximum width of a tree is nothï¿½ing but the Max(nodes at each level).
  * 
  * The solution of this problem is very simple, Do level order traversal and in recursive calls count 
  * 
  * the number of nodes at each level and keep track of Max of them and at the end return the max.
-   Read this solution ” Level Order Traversal, Print each level in separate line” and implement the above approach.
+   Read this solution ï¿½ Level Order Traversal, Print each level in separate lineï¿½ and implement the above approach.
  */
 import java.util.LinkedList;
 import java.util.Queue;
@@ -25,6 +25,7 @@ public class WidthOfBinaryTree {
 		
 		while(!q.isEmpty()){
 			levelNodes = q.size();
+			System.out.println("L="+levelNodes);
 			if(levelNodes > maxWidth){
 				maxWidth = levelNodes;
 			}

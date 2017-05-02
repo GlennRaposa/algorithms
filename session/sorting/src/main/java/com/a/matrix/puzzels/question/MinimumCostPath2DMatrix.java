@@ -1,14 +1,17 @@
 package com.a.matrix.puzzels.question;
+
+import java.util.Arrays;
+
 //http://algorithms.tutorialhorizon.com/dynamicprogrammingminimumcostpathproblem/
 //http://www.geeksforgeeks.org/dynamic-programming-set-6-min-cost-path/
 /*
  * Objective : Given a 2Dmatrix where each cell has a cost to travel. 
- * You have to write an algorithm to find a path from lefttop cor­ner to bottomright cor­ner with min­i­mum travel cost. 
+ * You have to write an algorithm to find a path from lefttop corï¿½ner to bottomright corï¿½ner with minï¿½iï¿½mum travel cost. 
  * You can move only right or down.
  * 
  * -----------Optimal Substructure------------
       The path to reach (i, j) must be through one of the 3 cells: (i-1, j-1) or (i-1, j) or (i, j-1). 
-      So minimum cost to reach (i, j) can be written as “minimum of the 3 cells plus cost[i][j]”.
+      So minimum cost to reach (i, j) can be written as ï¿½minimum of the 3 cells plus cost[i][j]ï¿½.
       minCost(i, j) = cost[i][j] + min (minCost(i-1, j-1), minCost(i-1, j), minCost(i, j-1))  
  * 
  * Approach
@@ -36,9 +39,10 @@ public class MinimumCostPath2DMatrix {
 			solution[i][0] = a[i][0] + solution[i-1][0]; 
 		}
 		
+		//System.out.println(Arrays.deepToString(solution));
 		
 		for(int i=1; i<a.length;i++){
-			for(int j = 1; j<a.length; j++){
+			for(int j = 1; j<a[0].length; j++){
 				solution[i][j] = a[i][j]+min(solution[i-1][j-1], solution[i-1][j], solution[i][j-1]);
 			}
 		}

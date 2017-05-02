@@ -11,7 +11,7 @@ import java.util.List;
 public class SubSetsFromGivenArraySet {
 	//function using DFS to split into smaller subsets 
 	private static List<List<Integer>> dfs(int[] nums) {
-	    List<List<Integer>> all = new ArrayList<>();
+	    List<List<Integer>> all = new ArrayList();
 	    List<Integer> one = new ArrayList<Integer>();
 	    dfs(nums, 0, one, all);
 	    return all;

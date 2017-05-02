@@ -1,32 +1,35 @@
 package com.a.matrix.puzzels.question;
+
+import java.util.Arrays;
+
 //http://algorithms.tutorialhorizon.com/dynamic-programming-maximum-size-square-sub-matrix-with-all-1s/
 /*
-Objec­tive: Given a matrix of 0’s and 1’s (binary matrix). Find out Max­i­mum size square sub-matrix with all 1’s.
+Objecï¿½tive: Given a matrix of 0ï¿½s and 1ï¿½s (binary matrix). Find out Maxï¿½iï¿½mum size square sub-matrix with all 1ï¿½s.
  
 Approach:
 Base Cases:
 
-If only one row is given then cells with 1’s will be the Max­i­mum size square sub-matrix with size = 1.
-If only one column is given then cells with 1’s will be the Max­i­mum size square sub-matrix with size = 1.
+If only one row is given then cells with 1ï¿½s will be the Maxï¿½iï¿½mum size square sub-matrix with size = 1.
+If only one column is given then cells with 1ï¿½s will be the Maxï¿½iï¿½mum size square sub-matrix with size = 1.
 
------Dynamic Pro­gram­ming (Bottom-up).
+-----Dynamic Proï¿½gramï¿½ming (Bottom-up).
 
-Cre­ate an aux­il­iary array of the same size as given input array. We will fill the aux­il­iary array with Max­i­mum size square sub-matrix with all 1’s pos­si­ble with respect to the par­tic­u­lar cell.
-Once the aux­il­iary is fill, scan it and find out the max­i­mum entry in it, this will the size of Max­i­mum size square sub-matrix with all 1’s in the given matrix.
-How to fill the aux­il­iary matrix??
+Creï¿½ate an auxï¿½ilï¿½iary array of the same size as given input array. We will fill the auxï¿½ilï¿½iary array with Maxï¿½iï¿½mum size square sub-matrix with all 1ï¿½s posï¿½siï¿½ble with respect to the parï¿½ticï¿½uï¿½lar cell.
+Once the auxï¿½ilï¿½iary is fill, scan it and find out the maxï¿½iï¿½mum entry in it, this will the size of Maxï¿½iï¿½mum size square sub-matrix with all 1ï¿½s in the given matrix.
+How to fill the auxï¿½ilï¿½iary matrix??
 
-Copy the first row and first col­umn from the given array to aux­il­iary array. (Read the base cases described earlier).
-For fill­ing rest of cells, check if par­tic­u­lar cell’s value is 0 in given array, if yes then put 0 against to that cell in aux­il­iary array.
-check if par­tic­u­lar cell’s value is 1 in given array, if yes then put Min­i­mum (value in the left cell, top cell and left-top diag­o­nal cell) + 1 in aux­il­iary cell.
+Copy the first row and first colï¿½umn from the given array to auxï¿½ilï¿½iary array. (Read the base cases described earlier).
+For fillï¿½ing rest of cells, check if parï¿½ticï¿½uï¿½lar cellï¿½s value is 0 in given array, if yes then put 0 against to that cell in auxï¿½ilï¿½iary array.
+check if parï¿½ticï¿½uï¿½lar cellï¿½s value is 1 in given array, if yes then put Minï¿½iï¿½mum (value in the left cell, top cell and left-top diagï¿½oï¿½nal cell) + 1 in auxï¿½ilï¿½iary cell.
 
 ---- Recursion
 basecase 
-sub[i][0] = arrA[i][0] i = 0 to row Count // copy the first col­umn
-sub[0][i] = arrA[0][i] i = 0 to col­umn Count // copy the first row
+sub[i][0] = arrA[i][0] i = 0 to row Count // copy the first colï¿½umn
+sub[0][i] = arrA[0][i] i = 0 to colï¿½umn Count // copy the first row
 
 for rest of the cells
 sub[i][j] = 0 if arrA[i][j]=0    = Min(sub[i-1][j], sub[i][j-1], sub[i-1][j-1] )
-At the End, scan the sub[][] and find out the max­i­mum entry in it.
+At the End, scan the sub[][] and find out the maxï¿½iï¿½mum entry in it.
  */
 public class MaximumSizeSquareSubMatrixOf1s {
 
@@ -62,6 +65,8 @@ public class MaximumSizeSquareSubMatrixOf1s {
 				}
 			}
 		}
+		
+		System.out.println(Arrays.deepToString(sub));
 		//find maximum size of the subarray
 		int max = -1;
 		for(int i=0;i<rows; i++){

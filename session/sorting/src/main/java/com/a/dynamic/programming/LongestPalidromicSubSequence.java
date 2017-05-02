@@ -6,14 +6,14 @@ import java.util.Arrays;
  * http://algorithms.tutorialhorizon.com/longest-palindromic-subsequence/
  * 
  * What is Longest Palindromic Subsequence: A longest palindromic subsequence is a sequence that appears in the same relative order, 
- * but not necessarily contiguous(not sub­string) and palindrome in nature( means the subsequence will read same from the front and back.
+ * but not necessarily contiguous(not subï¿½string) and palindrome in nature( means the subsequence will read same from the front and back.
  * Example:
    String A = " AABCDEBAZ";
    Longest Palindromic subsequence: ABCBA or ABDBA or ABEBA
    
    Dynamic Programming Optimal Substructure:
 
-   Given Sequence A[0….n-1]....LPS[0….n-1] be the longest palindromic subsequence of the given sequence.
+   Given Sequence A[0ï¿½.n-1]....LPS[0ï¿½.n-1] be the longest palindromic subsequence of the given sequence.
 
    Check the first and the last characters of the sequence. Now there are two possibilities, 
    either both the characters same or distinct. We will have to handle both the case.
@@ -71,6 +71,6 @@ public class LongestPalidromicSubSequence {
 		String strA = "AABCDEBAZ";
 		LongestPalidromicSubSequence i = new LongestPalidromicSubSequence();
 		int x = i.findPalindrome(strA);
-		System.out.println("Length of Longest Palindrome in '" + strA + "' is- " + x);
+		System.out.println("Length of Longest Palindrome in '" + strA + "' is " + x);
 	}
 }

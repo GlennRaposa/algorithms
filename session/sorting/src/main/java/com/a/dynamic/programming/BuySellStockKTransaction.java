@@ -36,7 +36,7 @@ public class BuySellStockKTransaction {
         int i = T.length - 1;
         int j = T[0].length - 1;
 
-        Deque<Integer> stack = new LinkedList<>();
+        Deque<Integer> stack = new LinkedList();
         while(true) {
             if(i == 0 || j == 0) {
                 break;

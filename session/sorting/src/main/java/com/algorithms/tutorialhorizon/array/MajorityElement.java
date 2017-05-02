@@ -1,9 +1,12 @@
 package com.algorithms.tutorialhorizon.array;
 /*
- * if its sorted array you could use binary search for first and last occurance. in this case its not a sorted array and thus we need to use the below algo
+ * if its sorted array you could use binary search for first and last occurance. 
+   in this case its not a sorted array and thus we need to use the below algo
  * http://www.ideserve.co.in/learn/find-majority-element-in-an-array
  * Moores Voting algorithm [This is a two step process.]
-    1. Get an element occurring most of the time in the array. This phase will make sure that if there is a majority element then it will return that only.
+    1. Get an element occurring most of the time in the array. 
+       This phase will make sure that if there is a majority element then it will return that only.
+       
     2. Check if the element obtained from above step is majority element.
  */
 import java.util.Arrays;
