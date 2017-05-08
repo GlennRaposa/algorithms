@@ -8,7 +8,26 @@ public class FindDuplicateCharacters {
 		System.out.println("Remove Duplicates ::"+removeDuplicates(str));
 	}
 
+	//Iterative Approach Time O(n+m) 
+	private static char findFirstDuplicateCharacter(String str)
+			throws RuntimeException {
+
+		char[] strChars = str.toCharArray();
+		int len = strChars.length;
+
+		for (int i = 0; i < len; i++) {
+			for (int j = i + 1; j < len; j++) {
+				if (strChars[i] == strChars[j]) {
+					return strChars[i];
+				}
+			}
+		}
+
+		throw new RuntimeException(
+				"There is no duplicate character in the string.");
+	}
 	
+	// Time O(n) by using two stringbuilder objects 
 	private static String findDuplicates(String word) {
 
 	    StringBuilder temp = new StringBuilder();
