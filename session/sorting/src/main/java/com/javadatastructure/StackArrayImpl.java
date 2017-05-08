@@ -1,4 +1,4 @@
-package com.stack.queue;
+package com.javadatastructure;
 
 public class StackArrayImpl {
 	int size;

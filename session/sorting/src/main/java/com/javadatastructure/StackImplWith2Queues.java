@@ -1,4 +1,4 @@
-package com.stack.queue;
+package com.javadatastructure;
 
 import java.util.LinkedList;
 import java.util.Queue;
