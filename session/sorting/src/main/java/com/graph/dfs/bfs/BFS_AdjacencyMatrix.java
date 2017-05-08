@@ -1,15 +1,18 @@
 package com.graph.dfs.bfs;
 
 import java.util.ArrayList;
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue; 
 
-/* 
- * Ref : http://www.java2blog.com/2015/12/depth-first-search-in-java.html
+/*
+ * Reference : http://www.java2blog.com/2015/12/breadth-first-search-in-java.html
  */
-public class DepthFirstSeachExample {
+public class BFS_AdjacencyMatrix {
 	
-	//Root NODE 
-	static ArrayList<Node> nodes = new ArrayList<Node>();
+Queue<Node> queue = new LinkedList<Node>();
+
+//Root NODE 
+static ArrayList<Node> nodes = new ArrayList<Node>();
 	
 	//Node
 	static class Node{
@@ -29,7 +32,7 @@ public class DepthFirstSeachExample {
 		
 		ArrayList<Node> neighbours = new ArrayList<Node>();
 		
-		//Is Node Present in ROOT-Nodes-Tree-structure
+		//Is Node Present in ROOT-Nodes-Tree Structure
 		for(int i = 0; i<nodes.size(); i++){
 			if(nodes.get(i).equals(x)){
 				nodeindex = i;
@@ -50,21 +53,21 @@ public class DepthFirstSeachExample {
 		return neighbours;
 	}
 	
-	public void dfsUsingStack(int adjacency_matrix[][],Node node){
-		Stack<Node> stack = new Stack<Node>();
-		stack.add(node);
+	public void bfsUsingStack(int adjacency_matrix[][],Node node){
+
+		queue.add(node);
 		node.visited = true;
 		
-		while(!stack.isEmpty()){
+		while(!queue.isEmpty()){
 			
-			Node element = stack.pop();
+			Node element = queue.remove();
 			System.out.println(element.data+"\t");
 			
 			ArrayList<Node> neighbours = findNeighbours(adjacency_matrix, element);
 			for(int i = 0; i<neighbours.size(); i++){
 				Node n = neighbours.get(i);
 				if(n != null && !n.visited){
-					stack.add(n);
+					queue.add(n);
 					n.visited = true;
 				}	
 			}	
@@ -99,13 +102,9 @@ public class DepthFirstSeachExample {
 				{0,0,0,0,0,0,0}, // Node 7: 70 
 			};
 		
-		DepthFirstSeachExample dfsExample = new DepthFirstSeachExample(); 
+		BFS_AdjacencyMatrix bfsExample = new BFS_AdjacencyMatrix(); 
 		System.out.println("The DFS traversal of the graph using stack "); 
-		dfsExample.dfsUsingStack(adjacency_matrix, node40); 
+		bfsExample.bfsUsingStack(adjacency_matrix, node40); 
 		System.out.println();
 	}
-	
-	
 }
-	
-

@@ -37,33 +37,33 @@ import java.util.Arrays;
 public class LongestPalidromicSubSequence {
 	public int findPalindrome(String A){
 		char [] chars = A.toCharArray();  //Convery string to character array..
-		int [][]LPS = new int[chars.length][chars.length]; 
+		int [][]solution = new int[chars.length][chars.length]; 
 		//LP[i][j] - length of palindrome from ith index to jth index
 		// all the characters in the string are palindrome by itself of length 1.
 		//So all LP[i][i] =  1 
 		for(int i=0;i<chars.length;i++){
-			LPS[i][i] = 1;			
+			solution[i][i] = 1;			
 		}
 		// Build the table. Note that the lower diagonal values of table are
         // useless and not filled in the process. The values are filled in a
         // manner similar to Matrix Chain Multiplication DP solution
 		for(int sublen = 2;sublen<=chars.length;sublen++){
-			for(int i=0;i<=LPS.length-sublen;i++){
+			for(int i=0;i<=solution.length-sublen;i++){
 				int j = i+sublen-1;
 				//case1: if string has only 2 characters in this case checks AA and is called only once
 				if(chars[i]==chars[j] && sublen==2){
-					LPS[i][j] = 2;
+					solution[i][j] = 2;
 				}//case2 : if first and last character is same 
 				else if(chars[i]==chars[j]){
-					LPS[i][j] = LPS[i+1][j-1]+2;
+					solution[i][j] = solution[i+1][j-1]+2;
 				}//case3: if first and last character is different then copy value of max last computed
 				else{
-					LPS[i][j] = Math.max(LPS[i+1][j],LPS[i][j-1]);
+					solution[i][j] = Math.max(solution[i+1][j],solution[i][j-1]);
 				}
 			}
 		}
-		System.out.println(Arrays.deepToString(LPS));
-		return LPS[0][LPS.length-1];
+		System.out.println(Arrays.deepToString(solution));
+		return solution[0][solution.length-1];
 		
 	}
 	

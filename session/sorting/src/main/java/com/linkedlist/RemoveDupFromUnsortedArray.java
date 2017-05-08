@@ -4,16 +4,16 @@ import java.util.HashMap;
 
 /*
 Input Linked List : 1->2->2->4->3->3->2
-Output : 1->2->4->3
+sOutput : 1->2->4->3
 Approach:
 
-Cre­ate a Hash Table
+Creï¿½ate a Hash Table
 Take two pointers, prevNode and CurrNode.
 PrevNode will point to the head of the linked list and currNode will point to the head.next.
 
 Now navigate through the linked list.
 Check every node data is present in the HashTable.
-if yes then delete that node using pre­vN­ode and currNode.
+if yes then delete that node using preï¿½vNï¿½ode and currNode.
 If No, then insert that node data into the linked list
 Return the head of the list
 

@@ -1,18 +1,15 @@
 package com.graph.dfs.bfs;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue; 
+import java.util.Stack;
 
-/*
- * Reference : http://www.java2blog.com/2015/12/breadth-first-search-in-java.html
+/* 
+ * Ref : http://www.java2blog.com/2015/12/depth-first-search-in-java.html
  */
-public class BreadthFirstSearchExample {
+public class DFS_AdjacencyMatrix {
 	
-Queue<Node> queue = new LinkedList<Node>();
-
-//Root NODE 
-static ArrayList<Node> nodes = new ArrayList<Node>();
+	//Root NODE 
+	static ArrayList<Node> nodes = new ArrayList<Node>();
 	
 	//Node
 	static class Node{
@@ -32,7 +29,7 @@ static ArrayList<Node> nodes = new ArrayList<Node>();
 		
 		ArrayList<Node> neighbours = new ArrayList<Node>();
 		
-		//Is Node Present in ROOT-Nodes-Tree Structure
+		//Is Node Present in ROOT-Nodes-Tree-structure
 		for(int i = 0; i<nodes.size(); i++){
 			if(nodes.get(i).equals(x)){
 				nodeindex = i;
@@ -53,21 +50,21 @@ static ArrayList<Node> nodes = new ArrayList<Node>();
 		return neighbours;
 	}
 	
-	public void bfsUsingStack(int adjacency_matrix[][],Node node){
-
-		queue.add(node);
+	public void dfsUsingStack(int adjacency_matrix[][],Node node){
+		Stack<Node> stack = new Stack<Node>();
+		stack.add(node);
 		node.visited = true;
 		
-		while(!queue.isEmpty()){
+		while(!stack.isEmpty()){
 			
-			Node element = queue.remove();
+			Node element = stack.pop();
 			System.out.println(element.data+"\t");
 			
 			ArrayList<Node> neighbours = findNeighbours(adjacency_matrix, element);
 			for(int i = 0; i<neighbours.size(); i++){
 				Node n = neighbours.get(i);
 				if(n != null && !n.visited){
-					queue.add(n);
+					stack.add(n);
 					n.visited = true;
 				}	
 			}	
@@ -102,9 +99,13 @@ static ArrayList<Node> nodes = new ArrayList<Node>();
 				{0,0,0,0,0,0,0}, // Node 7: 70 
 			};
 		
-		BreadthFirstSearchExample bfsExample = new BreadthFirstSearchExample(); 
+		DFS_AdjacencyMatrix dfsExample = new DFS_AdjacencyMatrix(); 
 		System.out.println("The DFS traversal of the graph using stack "); 
-		bfsExample.bfsUsingStack(adjacency_matrix, node40); 
+		dfsExample.dfsUsingStack(adjacency_matrix, node40); 
 		System.out.println();
 	}
+	
+	
 }
+	
+

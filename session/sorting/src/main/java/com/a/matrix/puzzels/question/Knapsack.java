@@ -1,3 +1,4 @@
+package com.a.matrix.puzzels.question;
 /*
 https://sadakurapati.wordpress.com/2013/11/30/algorithm-knapsack/
 

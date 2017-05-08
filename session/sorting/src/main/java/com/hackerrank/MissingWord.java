@@ -8,9 +8,15 @@ public class MissingWord {
 		String s1 = "I am using hackerrank to improve programming";
 		String s2 = "I am hackerrank to improve programming";
 		System.out.println(missingWords(s1, s2));
+		
+		//Variation of the same with a number array
+		int array1[] = { 1, 2, 3, 4, 5 };
+		int array2[] = { 1, 2, 4, 5 };
+		System.out.println(missingValue(array1, array2));
+		
 	}
 	
-	public static ArrayList<String> missingWords(String s1, String s2) {
+	public static ArrayList<?> missingWords(String s1, String s2) {
 			
 		    ArrayList<String> missing = new ArrayList<String>();
 			String[] a = s1.split(" ");
@@ -26,5 +32,21 @@ public class MissingWord {
 			
 			return missing;
 	}
+	
+	
+	public static ArrayList<Integer> missingValue(int[] a, int[] b) {
+		
+	    ArrayList<Integer> missing = new ArrayList<Integer>();
+		
+		for(int i=0, j=0; i < a.length; i++){
+			if(a[i] !=(b[j])) {
+				missing.add(a[i]);
+			} else {
+				j++;
+			}
+		}
+		
+		return missing;
+}
 	
 }

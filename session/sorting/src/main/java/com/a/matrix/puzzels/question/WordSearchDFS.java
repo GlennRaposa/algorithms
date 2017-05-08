@@ -1,5 +1,13 @@
+package com.a.matrix.puzzels.question;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 /*
 http://www.programcreek.com/2014/06/leetcode-word-search-ii-java/
+
 Given a 2D board and a list of words from the dictionary, find all words in the board.
 
 Each word must be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those 
@@ -105,3 +113,4 @@ class Trie{
         return true;
     }
 }
+

@@ -45,7 +45,6 @@ public class BuySellStockOneTransaction {
     	
     }
 	 
-	 
 	 public static void main(String args[]){
 		 int[] prices =  {100, 80, 120, 130, 70, 60, 100, 125};
 		 BuySellStockOneTransaction bs = new BuySellStockOneTransaction();

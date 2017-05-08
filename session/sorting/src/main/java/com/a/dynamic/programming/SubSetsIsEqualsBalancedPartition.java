@@ -25,7 +25,7 @@ such that the sum of elements in both subsets is same.
      part[i][j] = true if a subset of {arr[0], arr[1], ..arr[j-1]} has sum 
              equal to i, otherwise false
  */
-public class BalancedPartitionIntoSubSetsInEquals {
+public class SubSetsIsEqualsBalancedPartition {
 	
 	static boolean findPartition (int arr[], int n)
     {

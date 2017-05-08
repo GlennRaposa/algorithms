@@ -17,7 +17,7 @@ add 1 to the result and remove the last character from both the strings and make
 
 cas2 : Both characters are different
 Remove the last character of String 1 and make a recursive call and remove the last character from String 2 and make a recursive 
-and then return the max from returns of both recursive calls. see exam­ple below
+and then return the max from returns of both recursive calls. see examï¿½ple below
 
 Formula : Same as edit distance
 
@@ -30,16 +30,16 @@ Cij = c(i,0) = 0; //base case if B is null then LCS of A,B=0
 public class LongestCommonSubsequence {
 
 	public static int find(char[] A, char[] B) {
-		int[][] LCS = new int[A.length + 1][B.length + 1];
+		int[][] solution = new int[A.length + 1][B.length + 1];
 
 		// base case if A is null then LCS of A,B=0
 		for (int i = 0; i <= B.length; i++) {
-			LCS[0][i] = 0;
+			solution[0][i] = 0;
 		}
 
 		// base case if B is null then LCS of A,B=0
 		for (int i = 0; i <= B.length; i++) {
-			LCS[i][0] = 0;
+			solution[i][0] = 0;
 		}
 
 		for (int i = 1; i <= A.length; i++) {
@@ -48,17 +48,17 @@ public class LongestCommonSubsequence {
 
 				if (A[i - 1] == B[j - 1]) {
 					//if characters match add value from UPPER - TOP Left Diagonal CELL + 1 to the current computational cell
-					LCS[i][j] = LCS[i - 1][j - 1] + 1;
+					solution[i][j] = solution[i - 1][j - 1] + 1;
 				}
 				else {
 					//Find max value of either upper/TOP cells[i-1] OR LEFT Cell.  
-					LCS[i][j] = Math.max(LCS[i - 1][j], LCS[i][j - 1]);
+					solution[i][j] = Math.max(solution[i - 1][j], solution[i][j - 1]);
 				}
 
 			}
 		}
-		System.out.println(Arrays.deepToString(LCS));
-		return LCS[A.length][B.length];
+		System.out.println(Arrays.deepToString(solution));
+		return solution[A.length][B.length];
 
 	}
 
