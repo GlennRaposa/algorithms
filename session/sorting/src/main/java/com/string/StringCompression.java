@@ -25,7 +25,7 @@ public class StringCompression {
   
   
   public static void main(String[] args) {
-    	compressString("hellooopppppp");
+    	compressString("hellooopppppp"); // Compressed string: he2l3o6p
   }
 	
 
