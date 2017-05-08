@@ -12,7 +12,6 @@ public class FindDuplicateCharacters {
 	public static int detectDuplicate(String source) {
            boolean[] foundChars = new boolean[Character.MAX_VALUE+1];
            for(int i = 0; i < source.length(); i++) {
-             if(i >= Character.MAX_VALUE) return Character.MAX_VALUE;
               char currentChar = source.charAt(i);
               if(foundChars[currentChar]) return i;
               foundChars[currentChar] = true;
