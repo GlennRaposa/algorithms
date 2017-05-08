@@ -8,6 +8,17 @@ public class FindDuplicateCharacters {
 		System.out.println("Remove Duplicates ::"+removeDuplicates(str));
 	}
 
+	//Iterative Approach Time O(n) spaceo(1)
+	public static int detectDuplicate(String source) {
+           boolean[] foundChars = new boolean[Character.MAX_VALUE+1];
+           for(int i = 0; i < source.length(); i++) {
+             if(i >= Character.MAX_VALUE) return Character.MAX_VALUE;
+              char currentChar = source.charAt(i);
+              if(foundChars[currentChar]) return i;
+              foundChars[currentChar] = true;
+           }
+          return -1;
+	}		 
 	//Iterative Approach Time O(n+m) 
 	private static char findFirstDuplicateCharacter(String str)
 			throws RuntimeException {
