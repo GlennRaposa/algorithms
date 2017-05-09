@@ -1,4 +1,4 @@
-package com.test;
+package com.javadatastructure;
 //http://stackoverflow.com/questions/25501563/queue-implementation-with-generics-in-java
 import java.util.LinkedList;
 import java.util.List;

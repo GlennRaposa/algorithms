@@ -1,4 +1,4 @@
-package com.test;
+package com.javadatastructure;
 //http://cs.lmu.edu/~ray/notes/queues/
 import java.util.NoSuchElementException;
 

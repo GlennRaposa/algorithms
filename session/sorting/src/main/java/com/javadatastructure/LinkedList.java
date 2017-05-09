@@ -1,4 +1,4 @@
-package com.test;
+package com.javadatastructure;
 
 public class LinkedList {
  
@@ -46,19 +46,19 @@ public class LinkedList {
 			head = new Node(data);
 		}
  
-		Node crunchifyTemp = new Node(data);
-		Node crunchifyCurrent = head;
+		Node temp = new Node(data);
+		Node current = head;
  
 		// Let's check for NPE before iterate over crunchifyCurrent
-		if (crunchifyCurrent != null) {
+		if (current != null) {
  
 			// starting at the head node, crawl to the end of the list and then add element after last node
-			while (crunchifyCurrent.getNext() != null) {
-				crunchifyCurrent = crunchifyCurrent.getNext();
+			while (current.getNext() != null) {
+				current = current.getNext();
 			}
  
 			// the last node's "next" reference set to our new node
-			crunchifyCurrent.setNext(crunchifyTemp);
+			current.setNext(temp);
 		}
  
 		// increment the number of elements variable
@@ -79,22 +79,22 @@ public class LinkedList {
  
 	// inserts the specified element at the specified position in this list
 	public void add(Object data, int index) {
-		Node crunchifyTemp = new Node(data);
-		Node crunchifyCurrent = head;
+		Node temp = new Node(data);
+		Node current = head;
  
 		// Let's check for NPE before iterate over crunchifyCurrent
-		if (crunchifyCurrent != null) {
+		if (current != null) {
 			// crawl to the requested index or the last element in the list, whichever comes first
-			for (int i = 0; i < index && crunchifyCurrent.getNext() != null; i++) {
-				crunchifyCurrent = crunchifyCurrent.getNext();
+			for (int i = 0; i < index && current.getNext() != null; i++) {
+				current = current.getNext();
 			}
 		}
  
 		// set the new node's next-node reference to this node's next-node reference
-		crunchifyTemp.setNext(crunchifyCurrent.getNext());
+		temp.setNext(current.getNext());
  
 		// now set this node's next-node reference to the new node
-		crunchifyCurrent.setNext(crunchifyTemp);
+		current.setNext(temp);
  
 		// increment the number of elements variable
 		incrementCounter();
@@ -106,18 +106,18 @@ public class LinkedList {
 		// index must be 1 or higher
 		if (index < 0)
 			return null;
-		Node crunchifyCurrent = null;
+		Node current = null;
 		if (head != null) {
-			crunchifyCurrent = head.getNext();
+			current = head.getNext();
 			for (int i = 0; i < index; i++) {
-				if (crunchifyCurrent.getNext() == null)
+				if (current.getNext() == null)
 					return null;
  
-				crunchifyCurrent = crunchifyCurrent.getNext();
+				current = current.getNext();
 			}
-			return crunchifyCurrent.getData();
+			return current.getData();
 		}
-		return crunchifyCurrent;
+		return current;
  
 	}
  
@@ -128,15 +128,15 @@ public class LinkedList {
 		if (index < 1 || index > size())
 			return false;
  
-		Node crunchifyCurrent = head;
+		Node current = head;
 		if (head != null) {
 			for (int i = 0; i < index; i++) {
-				if (crunchifyCurrent.getNext() == null)
+				if (current.getNext() == null)
 					return false;
  
-				crunchifyCurrent = crunchifyCurrent.getNext();
+				current = current.getNext();
 			}
-			crunchifyCurrent.setNext(crunchifyCurrent.getNext().getNext());
+			current.setNext(current.getNext().getNext());
  
 			// decrement the number of elements variable
 			decrementCounter();
@@ -155,10 +155,10 @@ public class LinkedList {
 		String output = "";
  
 		if (head != null) {
-			Node crunchifyCurrent = head.getNext();
-			while (crunchifyCurrent != null) {
-				output += "[" + crunchifyCurrent.getData().toString() + "]";
-				crunchifyCurrent = crunchifyCurrent.getNext();
+			Node current = head.getNext();
+			while (current != null) {
+				output += "[" + current.getData().toString() + "]";
+				current = current.getNext();
 			}
  
 		}

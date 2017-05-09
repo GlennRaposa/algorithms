@@ -1,4 +1,4 @@
-package com.test;
+package com.javadatastructure;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
@@ -10,7 +10,7 @@ public class Queue<E> {
 	private int size;
 	private int head;
 	private int tail;
-    
+	
 	public void enqueue(E e){
 		if(size == elements.length){
 			ensureCapacity();
@@ -52,7 +52,7 @@ public class Queue<E> {
     }
     
     public static void main(String args[]){
-    	Queue<Integer> queue = new Queue<Integer>();
+ /*   	Queue<Integer> queue = new Queue<Integer>();
     	queue.enqueue(10);
     	queue.enqueue(20);
     	queue.enqueue(30);
@@ -64,7 +64,10 @@ public class Queue<E> {
     	System.out.println("Queue ::"+queue.denqueue());
     	System.out.println("Elements in Queue now-2 ::"+Arrays.toString(queue.elements));
     	System.out.println("Queue ::"+queue.size);
-    	System.out.println("value of head ::"+queue.head+"   value of tail :: "+queue.tail);
+    	System.out.println("value of head ::"+queue.head+"   value of tail :: "+queue.tail);*/
+    	
+    	
+    	System.out.println(1 % 2);
     	
     }
 }
