@@ -44,7 +44,7 @@ public class MyMap<K,V>{
 				 size --;
 				 
 				 while(temp < size){
-					 myEntry[i] = myEntry[i+1];
+					 myEntry[temp] = myEntry[temp+1];
 					 temp++;
 				 }
 			}
