@@ -41,8 +41,8 @@ public class MyList<E> {
 			
 			
 			while(temp < size){
-				elements[index] = elements[index+1];
-				elements[index+1] = null;
+				elements[temp] = elements[temp+1];
+				elements[tenp+1] = null;
 				temp++;
 			}
 		}
