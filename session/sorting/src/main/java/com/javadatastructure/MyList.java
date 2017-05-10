@@ -42,7 +42,7 @@ public class MyList<E> {
 			
 			while(temp < size){
 				elements[temp] = elements[temp+1];
-				elements[tenp+1] = null;
+				elements[temp+1] = null;
 				temp++;
 			}
 		}

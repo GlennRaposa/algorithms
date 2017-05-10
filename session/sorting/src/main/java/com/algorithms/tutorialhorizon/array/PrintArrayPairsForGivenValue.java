@@ -1,4 +1,7 @@
 package com.algorithms.tutorialhorizon.array;
+
+import java.util.Arrays;
+
 //http://www.geeksforgeeks.org/write-a-c-program-that-given-a-set-a-of-n-numbers-and-another-number-x-determines-whether-or-not-there-exist-two-elements-in-s-whose-sum-is-exactly-x/
 /*
   1) Initialize Binary Hash Map M[] = {0, 0, ...}
@@ -29,12 +32,33 @@ public class PrintArrayPairsForGivenValue {
 	            binmap[arr[i]] = true;
 	        }
 	    }
+ 	  
+ 	  
+ 	  
+ 	  public static void printpairs1(int arr[], int sum){
+ 		  //Sort to get larges 
+ 		  Arrays.sort(arr);
+
+ 		  //Setting largest value in boolean
+ 		  int n = arr.length;
+ 		  boolean[] binmap = new boolean[arr[n-1]+1];
+ 		  
+ 		  for(int i=0; i<arr.length; i++){
+ 			  
+ 			  int temp = sum-arr[i];
+ 			  
+ 			  if(temp>=0 && binmap[temp]){
+ 				  System.out.println("Pair with given sum "+sum+" is("+arr[i]+","+temp+")");
+ 			  }
+ 			  binmap[arr[i]] = true;
+ 		  }
+ 	  }
 	 
 	    // Main to test the above function
 	    public static void main (String[] args)
 	    {
 	        int A[] = {1, 8, 45, 6, 10, 8};
 	        int n = 16;
-	        printpairs(A,  n);
+	        printpairs1(A,  n);
 	    }
 }

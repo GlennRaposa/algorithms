@@ -1,3 +1,7 @@
+package com.algorithms.tutorialhorizon.array;
+
+import java.util.Arrays;
+
 public class RemoveDuplicateInArray {
 
 	public static void main(String args[]) {
@@ -12,7 +16,6 @@ public class RemoveDuplicateInArray {
         Arrays.sort(numbersWithDuplicates);     
       
         int[] result = new int[numbersWithDuplicates.length];
-        System.out.println(Arrays.toString(result));
         
         int previous = numbersWithDuplicates[0];
         result[0] = previous;
@@ -31,3 +34,4 @@ public class RemoveDuplicateInArray {
       }
       //output : initialize Array -> [0, 0, 0, 0, 0, 0, 0] - > process array -> {1, 1, 2, 2, 3, 4, 5} result ->  [1, 0, 2, 0, 3, 4, 5]
     }
+   
