@@ -43,7 +43,7 @@ public class LongestIncreasingSubSequencePatienceSorting {
 			int pos = low;
 			//update parent/previous element for LIS
 			parent[i] = increasingSub[pos-1];
-			//Replace or append
+			//Rule1: Append if Greater  RULE2: Replace is smaller
 			increasingSub[pos] =  i;
 			
 			//Update the length of the longest subsequence.

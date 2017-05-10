@@ -19,6 +19,7 @@ public class MajorityElement {
 		}
 		Integer canadiate = null;
 		int count = 0;
+		//This Condition Marks counter on multiples 
 		for(int i =0; i<arr.length; i++){
 			if(count ==0){
 				canadiate = arr[i];
@@ -32,11 +33,11 @@ public class MajorityElement {
 				}
 			}
 		}
-		
+		//if no multiples then return null
 		if(count == 0){
 			return null;
 		}
-		
+		//find if counter count is greater than half of its length
 		for(int i=0; i<arr.length; i++){
 			if(canadiate == arr[i]){
 				count++;

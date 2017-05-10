@@ -22,8 +22,8 @@ public class SortArrayHaving0And1 {
 		int[] arr = { 0, 1, 0, 1, 0, 1, 0 };
 		sortArray(arr);
 		System.out.println("Sorted array is:"+Arrays.toString(arr));
-		
 	}
+	
 	private static void sortArray(int[] arr) {
 		
 		int low = 0;

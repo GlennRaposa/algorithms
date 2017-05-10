@@ -1,5 +1,6 @@
 package com.a.dynamic.programming;
 //http://www.geeksforgeeks.org/dynamic-programming-set-18-partition-problem/
+//Video - http://www.ideserve.co.in/learn/set-partition-problem-dynamic-programming
 /*
  * Timecompletxity O(sum*n)
  * 
