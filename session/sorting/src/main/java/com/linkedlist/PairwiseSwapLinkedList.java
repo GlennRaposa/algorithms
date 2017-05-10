@@ -1,7 +1,7 @@
 package com.linkedlist;
 
 // Java program to pairwise swap elements of a linked list
-class LinkedList
+class PairwiseSwapLinkedList
 {
     Node head;  // head of list
   
