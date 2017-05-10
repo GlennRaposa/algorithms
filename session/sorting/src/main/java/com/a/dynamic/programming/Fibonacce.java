@@ -42,6 +42,22 @@ public class Fibonacce {
     	return memo.put(n, SumOfNthfib((n-1)+2, memo));
     }
     
+    //Fibonacce Iterative solution
+    public static int getFibonacci(int n) {
+        if(n < 0) {
+            throw new IllegalArgumentException("n cannot be negative!");
+        }
+        if(n == 0 || n == 1) 
+            return n;
+        int a = 0, b = 1;
+        int c = a+b;
+        for(int i = 2; i <= n; i++) {
+            c = a+b;
+            a = b;
+            b = c;
+        }
+        return c;
+    }
     
     public static void main(String args[]) {
     	Map<Integer,Integer> memo = new HashMap<Integer,Integer>();

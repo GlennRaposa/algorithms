@@ -22,15 +22,6 @@ public class MaximumSubArrayKadaneAlgo {
 	
 	List<Integer> list = new ArrayList<Integer>();
 	
-	public static void main(String args[]){
-		MaximumSubArrayKadaneAlgo a = new MaximumSubArrayKadaneAlgo();
-		int arrA[] = { 1, 2, -3, -4, 2, 7, -2, 3 };
-		System.out.println("Maximum subarray is  "+a.maxSubArray(arrA));
-		System.out.println("List of Integers  "+a.list);
-		int arrB[] = { -2, -3, -4, -2, -7, -2, -3,-11 };
-		System.out.println("Maximum Subarray when all elements are negative : " + a.KandaneModify(arrB));
-	}
-	
 	public int maxSubArray(int[] arr){
 		int max_so_far = 0;
 		int max_ending_here = 0;
@@ -61,5 +52,14 @@ public class MaximumSubArrayKadaneAlgo {
 		return max_so_far;
 	}
 	
+	
+	public static void main(String args[]){
+		MaximumSubArrayKadaneAlgo a = new MaximumSubArrayKadaneAlgo();
+		int arrA[] = { 1, 2, -3, -4, 2, 7, -2, 3 };
+		System.out.println("Maximum subarray is  "+a.maxSubArray(arrA));
+		System.out.println("List of Integers  "+a.list);
+		int arrB[] = { -2, -3, -4, -2, -7, -2, -3,-11 };
+		System.out.println("Maximum Subarray when all elements are negative : " + a.KandaneModify(arrB));
+	}
 
 }
