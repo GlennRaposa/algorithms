@@ -20,10 +20,6 @@ public class FirstNoRepetableCharacter {
         }
          
         int n = string.length();
-        if(n == 1) {
-            return string.charAt(0);
-        }
-         
         int[] charIdx = new int[256];   // Index of non repeating characters. If repeating, then index = -2
         // Initialize character index of all characters to -1
         for(int i = 0; i < 256; i++) {
