@@ -18,14 +18,12 @@ public class BinaryRotationCount {
 			if(a[low] <=a[high]){
 				return low;
 			}
-			int next = (mid+1)%length;
-			int prev = (mid+length-1)%length;
-			
-			if(a[mid] <= a[next] && a[mid] <= a[prev]){
+			//if MID is Less than its LEFT and less than its RIGHT 
+			if(a[mid] <= a[mid+1] && a[mid] <= a[mid-1]){
 				return mid;
 			}
 			else if(a[mid] <=a[high]){
-				high = mid -1;
+				high = mid-1;
 			}else if (a[mid] >=a[low]){
 				low = mid+1;
 			}

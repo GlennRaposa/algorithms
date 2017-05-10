@@ -22,7 +22,7 @@ package com.a.matrix.puzzels.question;
  * http://www.careercup.com/question?id=6299074475065344
 */
 public class MaximumRectangularSubmatrixOf1s {
-   
+ /*  
 	public int maximum(int[][] input){
 		int temp[] = new int[input[0].length];
 		int maxArea = 0;
@@ -56,7 +56,7 @@ public class MaximumRectangularSubmatrixOf1s {
         int maxRectangle = mrs.maximum(input);
         System.out.println("Max rectangle is of size " + maxRectangle);
         assert maxRectangle == 8;
-    }
+    }*/
 	
 	
 }

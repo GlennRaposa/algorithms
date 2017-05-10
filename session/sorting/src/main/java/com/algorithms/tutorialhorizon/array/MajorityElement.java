@@ -28,7 +28,7 @@ public class MajorityElement {
 				if(canadiate == arr[i]){
 					count++;
 				}else{
-					count --;
+					count--;
 				}
 			}
 		}
