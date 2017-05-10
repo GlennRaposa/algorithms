@@ -1,36 +1,23 @@
  package com.linkedlist;
 //http://algorithms.tutorialhorizon.com/reverse-a-linked-list/
 
-
 public class ReverseLinkedList {
-	
-	NodeL head;
-	
-	class NodeL{
-		int data;
-		NodeL next;
-		
-		NodeL(int data){
+
+	private static class Node {
+		private int data;
+		private Node next;
+
+		@SuppressWarnings("unused")
+		Node(int data) {
 			this.data = data;
-			next = null;
+			this.next = null;
 		}
 	}
 	
-	public ReverseLinkedList(){
-		head=null;
-	}
-
-	public void addAtBegin(int data){
-		NodeL n = new NodeL(data);
-		n.next = head;
-		head = n;
-	}
-	
-	public void reverse(NodeL head){
-		NodeL curr = head;
-		NodeL next = null;
-		NodeL prev = null;
-		
+	public static Node reverse(Node head){
+		Node curr = head;
+		Node next = null;
+		Node prev = null;
 		
 		while(curr != null){
 			next = curr.next; //Assign next value to temp variable so we dont loss next value
@@ -40,30 +27,25 @@ public class ReverseLinkedList {
 		}
 		head = prev;
 		System.out.println("\n Reverse Through Iteration");
-		display(head);
+		return head;
 	}
 	
-	public void display(NodeL head){
-		//
-		NodeL currNode = head;
-		while(currNode!=null){
-			System.out.print("->" + currNode.data);
-			currNode=currNode.next;
-		}
-	}
 	
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		ReverseLinkedList a = new ReverseLinkedList();
-		a.addAtBegin(5);
-		a.addAtBegin(10);
-		a.addAtBegin(15);
-		a.addAtBegin(20);
-		a.addAtBegin(25);
-		a.addAtBegin(30);
-//		System.out.print("Original Link List 1 : ");
-		a.display(a.head);
-		a.reverse(a.head);
+		Node head = new Node(5);
+		head.next = new Node(10);
+		head.next.next = new Node(15);
+		head.next.next.next = new Node(20);
+		head.next.next.next.next = new Node(25);
+		head.next.next.next.next.next = new Node(30);
+
+		Node curr = reverse(head);
+		while(curr!=null){
+			System.out.println("Node Date ::"+curr.data);
+			curr = curr.next;
+		}
 	}
 
 }
+

@@ -20,55 +20,56 @@ package com.linkedlist;
 	We have shown the removal of duplicate elements in Fig 2.
  */
 public class RemoveDuplicateFromSortedLinkedList {
-	
-	public static void removeDuplicates(Node head) {
+
+	private static class Node {
+		private int data;
+		private Node next;
+
+		Node(int data) {
+			this.data = data;
+			this.next = null;
+		}
+	}
+
+	public static Node removeDuplicates(Node head) {
 		// first node to be inserted
 		if (null == head) {
 			System.out.println("Linked list is empty");
-			return;
+			return null;
 		}
+
+		Node curr = head;
 		Node nextNode = null;
-		while (head.next != null) {
+		while (curr.next != null) {
 			// check for duplicates
 			// E.g 1->2->2->3
-			if (head.data == head.next.data) {
-				nextNode = head.next.next;
+			if (curr.data == curr.next.data) {
+				nextNode = curr.next.next;
 				// deleting next node...
 				// let gc take care of it
-				head.next = null;
-				head.next = nextNode;
+				curr.next = null;
+				curr.next = nextNode;
 			} else {
 				// no duplicate..move to next node
-				head = head.next;
+				curr = curr.next;
 			}
 		}
+		return head;
 	}
 
-	public static void insert(Node head, int data) {
-		while (head.next != null)
-			head = head.next;
-		head.next = new Node(data);
-	}
-
-	public static void print(Node head) {
-		while (head != null) {
-			System.out.printf("%d ", head.data);
-			head = head.next;
-		}
-		System.out.println("");
-	}
-	
 	public static void main(String[] args) {
-		int[] listData = { 1, 2, 2, 3, 3, 9 };
-		Node head = new Node(listData[0]);
-		for (int count = 1; count < listData.length; count++)
-		RemoveDuplicateFromSortedLinkedList.insert(head, listData[count]);
 
-		System.out.printf("Linked list is : ");
-		RemoveDuplicateFromSortedLinkedList.print(head);
+		Node head = new Node(1);
+		head.next = new Node(2);
+		head.next.next = new Node(2);
+		head.next.next.next = new Node(3);
+		head.next.next.next.next = new Node(3);
+		head.next.next.next.next.next = new Node(9);
 
-		RemoveDuplicateFromSortedLinkedList.removeDuplicates(head);
-		System.out.printf("Linked list after removing duplicates : ");
-		RemoveDuplicateFromSortedLinkedList.print(head);
+		Node curr = removeDuplicates(head);
+		while (curr != null) {
+			System.out.println("Current node value:" + curr.data);
+			curr = curr.next;
+		}
 	}
 }
