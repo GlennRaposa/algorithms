@@ -7,14 +7,6 @@ public class SecondLargestElement {
     public static void main(String[] args) {
         int[] inputArray = {2, 4, 6, 8, 10, 12};
         printSecondLargestElement(inputArray);
-
-        System.out.println();
-        inputArray = new int[]{5, 3, 4, 1, 2};
-        printSecondLargestElement(inputArray);
-
-        System.out.println();
-        inputArray = new int[]{16, 41, 41, 9, 41, 7};
-        printSecondLargestElement(inputArray);
     }
 
     private static void printSecondLargestElement(int[] inputArray) {
