@@ -40,7 +40,7 @@ public class DecodeWaysDP {
 	}
 	
 	public static void main(String args[]){
-		System.out.println("BOOO_Madarchod ----: "+dp("12"));
+		System.out.println("BOOO_ ----: "+dp("12"));
 		
 	}
 }
