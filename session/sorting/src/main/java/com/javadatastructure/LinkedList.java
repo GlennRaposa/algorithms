@@ -62,19 +62,12 @@ public class LinkedList {
 		}
  
 		// increment the number of elements variable
-		incrementCounter();
+		counter++;
+
 	}
  
 	private static int getCounter() {
 		return counter;
-	}
- 
-	private static void incrementCounter() {
-		counter++;
-	}
- 
-	private void decrementCounter() {
-		counter--;
 	}
  
 	// inserts the specified element at the specified position in this list
@@ -97,7 +90,8 @@ public class LinkedList {
 		current.setNext(temp);
  
 		// increment the number of elements variable
-		incrementCounter();
+		counter++;
+
 	}
  
 	public Object get(int index)
@@ -139,7 +133,7 @@ public class LinkedList {
 			current.setNext(current.getNext().getNext());
  
 			// decrement the number of elements variable
-			decrementCounter();
+			counter--;
 			return true;
  
 		}
@@ -148,7 +142,7 @@ public class LinkedList {
  
 	// returns the number of elements in this list.
 	public int size() {
-		return getCounter();
+		return counter;
 	}
  
 	public String toString() {
@@ -159,7 +153,7 @@ public class LinkedList {
 			while (current != null) {
 				output += "[" + current.getData().toString() + "]";
 				current = current.getNext();
-			}
+			}                                                                                 
  
 		}
 		return output;
@@ -175,7 +169,7 @@ class Node {
 	// data carried by this node. could be of any type you need.
 	Object data;
 
-	// Node constructor
+	// Node constructorw2
 	public Node(Object dataValue) {
 		next = null;
 		data = dataValue;

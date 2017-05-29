@@ -67,7 +67,10 @@ public class Queue<E> {
     	System.out.println("value of head ::"+queue.head+"   value of tail :: "+queue.tail);*/
     	
     	
-    	System.out.println(1 % 2);
+    	System.out.println(20 % 20);
     	
     }
+    
+    
+    
 }

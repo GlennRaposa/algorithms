@@ -1,4 +1,5 @@
 package com.linkedlist;
+
 /*
  * http://www.java2blog.com/2014/07/find-middle-element-of-linkedlist-in.html
  * find middle element in one traversal also using following algo:
@@ -25,4 +26,14 @@ public class FindMiddleElementLinkedList {
 	  return slowPointer; 
 	 
 	 }
+	
+	private static class Node {
+		private int data;
+		private Node next;
+
+		Node(int data) {
+			this.data = data;
+			this.next = null;
+		}
+	}
 }

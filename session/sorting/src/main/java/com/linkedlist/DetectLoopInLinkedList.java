@@ -1,4 +1,6 @@
 package com.linkedlist;
+
+
 /*
  * http://www.java2blog.com/2014/07/how-to-detect-loop-in-linkedlist-in.html
  * http://www.makeinjava.com/floyds-cycle-detection-algorithm-check-loop-single-linked-list/
@@ -22,6 +24,16 @@ public class DetectLoopInLinkedList {
 			}	
 		}
 		return false;
+	}
+	
+	private static class Node {
+		private int data;
+		private Node next;
+
+		Node(int data) {
+			this.data = data;
+			this.next = null;
+		}
 	}
 	
 }

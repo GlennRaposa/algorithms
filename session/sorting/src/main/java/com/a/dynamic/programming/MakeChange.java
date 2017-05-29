@@ -1,6 +1,8 @@
-//http://users.cs.fiu.edu/~weiss/dsj3/code/MakeChange.java
+package com.a.dynamic.programming;
+
 public final class MakeChange
 {
+	//http://users.cs.fiu.edu/~weiss/dsj3/code/MakeChange.java
     // Dynamic programming algorithm to solve change making problem.
     // As a result, the coinsUsed array is filled with the
     // minimum number of coins needed for change from 0 -> maxChange

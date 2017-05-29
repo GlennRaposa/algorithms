@@ -1,4 +1,5 @@
 package com.designpattern.behavioural.state;
+//http://www.blackwasp.co.uk/State_2.aspx
 //http://www.journaldev.com/1751/state-design-pattern-java
 /*
  * Rules of thumb

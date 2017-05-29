@@ -1,6 +1,8 @@
 package com.hackerrank;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class MissingWord {
 
@@ -16,9 +18,9 @@ public class MissingWord {
 		
 	}
 	
-	public static ArrayList<?> missingWords(String s1, String s2) {
+	public static Set<?> missingWords(String s1, String s2) {
 			
-		    ArrayList<String> missing = new ArrayList<String>();
+		    Set<String> missing = new HashSet<String>();
 			String[] a = s1.split(" ");
 			String[] b = s2.split(" ");
 			

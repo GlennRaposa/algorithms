@@ -4,7 +4,7 @@ public class FindDuplicateCharacters {
 	
 	public static void main(String args[]){
 		String str = "Programming";
-		System.out.println("Find Duplicates ::"+findDuplicates(str));
+		System.out.println("Find Duplicates ::"+detectDuplicate(str));
 		System.out.println("Remove Duplicates ::"+removeDuplicates(str));
 	}
 
@@ -17,9 +17,11 @@ public class FindDuplicateCharacters {
               foundChars[currentChar] = true;
            }
           return -1;
-	}		 
+	}
+	
+	
 	//Iterative Approach Time O(n+m) 
-	private static char findFirstDuplicateCharacter(String str)
+/*	private static char findFirstDuplicateCharacter(String str)
 			throws RuntimeException {
 
 		char[] strChars = str.toCharArray();
@@ -36,9 +38,10 @@ public class FindDuplicateCharacters {
 		throw new RuntimeException(
 				"There is no duplicate character in the string.");
 	}
+*/	
 	
 	// Time O(n) by using two stringbuilder objects 
-	private static String findDuplicates(String word) {
+/*	private static String findDuplicates(String word) {
 
 	    StringBuilder temp = new StringBuilder();
 	    StringBuilder dup = new StringBuilder();
@@ -52,7 +55,7 @@ public class FindDuplicateCharacters {
 	    }
 
 	    return dup.toString();
-	}
+	}*/
 
 
 	private static String removeDuplicates(String word) {

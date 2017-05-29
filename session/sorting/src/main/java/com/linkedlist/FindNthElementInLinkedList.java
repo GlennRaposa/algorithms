@@ -1,4 +1,5 @@
 package com.linkedlist;
+
 /*
  * http://www.java2blog.com/2014/07/find-nth-element-from-end-of-linked-list.html
  * Assumption:
@@ -31,4 +32,14 @@ public class FindNthElementInLinkedList {
 	  
 	  return secondPtr;
 	 }
+	 
+	 private static class Node {
+			private int data;
+			private Node next;
+
+			Node(int data) {
+				this.data = data;
+				this.next = null;
+			}
+		}
 }

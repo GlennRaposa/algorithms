@@ -1,5 +1,6 @@
 package com.designpattern.creational.Builder;
 //http://howtodoinjava.com/design-patterns/creational/builder-pattern-in-java/
+//https://jlordiales.me/2012/12/13/the-builder-pattern-in-practice/
 /*
  * Builder pattern aims to “Separate the construction of a complex object 
    from its representation so that the same construction process can create different representations.”
@@ -12,7 +13,6 @@ package com.designpattern.creational.Builder;
                 .toString();
 */
 public class User {
-
 
    private final String firstName;
    private final String lastName;
@@ -104,5 +104,5 @@ public class User {
 		User user = new User.UserBuilder().firstName("Glenn").lastName("Raposo").age("37").address("Everett").phone("111").buildUser();
 		System.out.println("Stand up ::"+user.firstName);
 	}
-   
+	
 }

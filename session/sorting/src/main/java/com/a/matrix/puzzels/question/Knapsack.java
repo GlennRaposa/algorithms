@@ -30,7 +30,7 @@ public class Knapsack {
     printSelectedItems(keep, sackCapacity, price, weights);
   }
  
-  /**
+  /**a
    * price[] - value - $$$ Gain weights[] - weights sackCapacity - the maximum
    * weight knapsack can carry.
    */

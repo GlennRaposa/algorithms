@@ -35,7 +35,8 @@ public class FirstNoRepetableCharacter {
                 charIdx[string.charAt(i)] = -2;
             }
         }
-         
+        
+        System.out.println(Arrays.toString(charIdx));
         int minIdx = n; // Index of first non repeating character
         for(int i = 0; i < 256; i++) {
             if(charIdx[i] >= 0 && 
